@@ -1,0 +1,184 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow">
+
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/yellow"
+    style="@style/LinearLayoutStyle"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/titleLayout"-->
+        <!--style="@style/LinearLayoutStyle">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/app_name"-->
+            <!--style="@style/TextViewStyle"-->
+            <!--android:textColor="@color/darkBlack"-->
+            <!--android:gravity="center" />-->
+
+        <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountLayout"
+        style="@style/LinearLayoutStyle"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            style="@style/TextViewStyle"
+            android:id="@+id/amountTextView"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amountTextView"
+            android:id="@+id/amountEditText"
+            style="@style/EditTextStyle"
+            android:inputType="numberDecimal"
+            />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/interestRateLayout"
+        style="@style/LinearLayoutStyle"
+        android:layout_below="@+id/amountLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interestRate"
+            android:id="@+id/interestRateTextView"
+            style="@style/TextViewStyle"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/interestRateTextView"
+            android:id="@+id/interestRateEditText"
+            style="@style/EditTextStyle"
+            android:inputType="numberDecimal"
+            />
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/interestRateLayout"
+    style="@style/LinearLayoutStyle"
+    android:id="@+id/startDateLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/startDate"
+        android:id="@+id/startDateTextView"
+        style="@style/TextViewStyle"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startDateEditText"
+        android:layout_below="@+id/startDateTextView"
+        style="@style/EditTextStyle"
+        />
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startDateLayout"
+        android:id="@+id/endDateLayout"
+        style="@style/LinearLayoutStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/endDate"
+            android:id="@+id/endDateTextView"
+            style="@style/TextViewStyle"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/endDateEditText"
+            android:layout_below="@+id/endDateTextView"
+            style="@style/EditTextStyle"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/endDateLayout"
+        android:id="@+id/submitLayout"
+        style="@style/LinearLayoutStyle">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:background="@color/darkOrange"
+            android:onClick="submitButtonOnClick"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submitLayout"
+        android:id="@+id/resultLayout"
+        style="@style/LinearLayoutStyle">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultTextView"
+            style="@style/TextViewStyle"
+            android:textColor="@color/royalBlue"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultLayout"
+        android:id="@+id/copyrightLayout"
+        style="@style/LinearLayoutStyle">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/copyrightTextView"
+            style="@style/TextViewStyle"
+            android:text="@string/copyright"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    </ScrollView>

@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppThemeWithActionBar" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/ActionBarTheme</item>
+    </style>
+
+    <style name="ActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/darkOrange</item>
+    </style>
+
+    <style name="LinearLayoutStyle">
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+
+
+</resources>
