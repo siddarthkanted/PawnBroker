@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/pawn_broker_logo"
+        android:icon="@mipmap/physical_balance"
         android:label="@string/app_name"
         android:theme="@style/AppThemeWithActionBar" >
 

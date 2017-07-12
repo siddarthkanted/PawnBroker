@@ -5,7 +5,8 @@
     <string name="interestRate">Interest Rate</string>
     <string name="startDate">Start Date</string>
     <string name="endDate">End Date</string>
-    <string name="submit">Submit</string>
+    <string name="simpleInterest">Simple Interest</string>
+    <string name="compoundInterest">Compound Interest</string>
     <string name="amount">Amount</string>
     <string name="differenceBetween">Difference between %1$s and %2$s is %3$s %4$s</string>
     <string name="days">Days</string>

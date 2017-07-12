@@ -139,11 +139,23 @@
         style="@style/LinearLayoutStyle">
 
         <Button
-            android:layout_width="match_parent"
+            android:id="@+id/simpleInterestButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/submit"
+            android:text="@string/simpleInterest"
             android:background="@color/darkOrange"
-            android:onClick="submitButtonOnClick"/>
+            android:onClick="submitButtonOnClick"
+            android:padding="4dp"/>
+
+        <Button
+            android:layout_toRightOf="@+id/simpleInterestButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/compoundInterest"
+            android:background="@color/darkOrange"
+            android:onClick="compoundInterestButtonOnClick"
+            android:padding="4dp"
+            android:layout_marginLeft="14dp"/>
 
     </RelativeLayout>
 
@@ -163,21 +175,6 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/resultLayout"
-        android:id="@+id/copyrightLayout"
-        style="@style/LinearLayoutStyle">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/copyrightTextView"
-            style="@style/TextViewStyle"
-            android:text="@string/copyright"/>
-
-    </RelativeLayout>
 
 </RelativeLayout>
 

@@ -12,4 +12,6 @@ public class Constant {
     public static String amount = "100";
     public static String interestRate = "2.5";
 
+    public enum InterestTypeEnum { Simple, Compound}
+
 }

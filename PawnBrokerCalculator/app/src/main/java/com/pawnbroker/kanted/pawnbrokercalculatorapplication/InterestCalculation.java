@@ -17,18 +17,17 @@ public class InterestCalculation {
     private String interestRate;
     private String startDate;
     private String endDate;
-
+    private Constant.InterestTypeEnum interestTypeEnum;
     private List<String> resultList;
-
     private Activity activity;
 
-    public InterestCalculation(Activity mainActivity, String amount, String interestRate, String startDate, String endDate) {
+    public InterestCalculation(Activity mainActivity, String amount, String interestRate, String startDate, String endDate, Constant.InterestTypeEnum interestTypeEnum) {
         this.activity = mainActivity;
         this.amount = amount;
         this.interestRate = interestRate;
         this.startDate = startDate;
         this.endDate = endDate;
-
+        this.interestTypeEnum = interestTypeEnum;
         resultList = new ArrayList<>();
     }
 
@@ -83,10 +82,20 @@ public class InterestCalculation {
 
     private void calculateInterest(Double months){
         if (months >= 1) {
-            double interest = Double.parseDouble(amount) * Double.parseDouble(interestRate) * months;
-            interest = interest/100;
+            double interest =0, totalAmount =0;
 
-            double totalAmount =  Double.parseDouble(amount) + interest;
+            switch(interestTypeEnum){
+                case Simple:
+                    interest = Double.parseDouble(amount) * Double.parseDouble(interestRate) * months;
+                    interest = interest/100;
+                    totalAmount =  Double.parseDouble(amount) + interest;
+                    break;
+                case Compound:
+                    totalAmount =  Double.parseDouble(amount) * Math.pow((1 + Double.parseDouble(interestRate)/100), months);
+                    interest = totalAmount - Double.parseDouble(amount);
+                    break;
+            }
+
 
             String response = String.format(activity.getString(R.string.interestMonths),
                     Math.round(months * 100.0) / 100.0,
